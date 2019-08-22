@@ -33,4 +33,4 @@
 Page (/publications)`
 4. Appearance --> your theme -->setting, choose the color and close the display of theme logo.
 5. The front page after the content migration:
-![](./img/finalpage.png)
+![](./img/final2.png)
