@@ -245,9 +245,10 @@ app.layout = html.Div([
                                     id="mid-left-graph",
                                     className="eleven columns",
                                     children=[
-                                        html.Div([html.H1(
+                                        html.Div([html.H5(
                                             'Pie Chart',
-                                            id='pie-graph-title'
+                                            id='pie-graph-title',
+                                            className="card-title"
                                         ),  
                                         ], style={"textAlign": "center","height": "100%", "width": "100%"},
                                         className="pie_chart",   
