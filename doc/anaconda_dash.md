@@ -19,3 +19,11 @@ conda install 库名 ：可以直接安装想要的库。如：
 conda install -c conda-forge dash -y
 conda install -c anaconda xlsxwriter -y
 ```
+
+# db project
+```
+<iframe src="http://tangtyuncsam.pythonanywhere.com/" width="100%" height="900" frameborder="0" sandbox="allow-same-origin allow-scripts"></iframe>
+```
+# LInk
+参考网站：
+https://dash-gallery.plotly.host/Portal/

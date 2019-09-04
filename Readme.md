@@ -150,3 +150,4 @@ Add the `Markdown PDF` extension and right click the markdown file, you can expo
 # Final result
 The front page after the content migration:
 ![](./img/final3.png)
+![](./img/website.gif)
