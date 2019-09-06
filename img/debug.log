@@ -7,3 +7,4 @@
 [0906/141241:INFO:exception_record.cc(518)] [QB]Process ID: 17528 Type: 2
 [0906/141244:WARNING:webmediaplayer_impl.cc(341)] Using MultibufferDataSource
 [0906/141327:WARNING:spdy_session.cc(2455)] Received HEADERS for invalid stream 7
+[0906/143226:INFO:exception_record.cc(518)] [QB]Process ID: 16732 Type: 2
