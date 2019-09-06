@@ -1,2 +1,9 @@
 [0827/165944:INFO:exception_record.cc(518)] [QB]Process ID: 27532 Type: 2
 [0828/093345:INFO:exception_record.cc(518)] [QB]Process ID: 34172 Type: 2
+[0906/141011:INFO:exception_record.cc(518)] [QB]Process ID: 26196 Type: 2
+[0906/141011:INFO:http_cache_transaction.cc(72)] IgnoreZeroCacheError: 0
+[0906/141116:INFO:exception_record.cc(518)] [QB]Process ID: 20868 Type: 2
+[0906/141129:INFO:exception_record.cc(518)] [QB]Process ID: 14492 Type: 2
+[0906/141241:INFO:exception_record.cc(518)] [QB]Process ID: 17528 Type: 2
+[0906/141244:WARNING:webmediaplayer_impl.cc(341)] Using MultibufferDataSource
+[0906/141327:WARNING:spdy_session.cc(2455)] Received HEADERS for invalid stream 7

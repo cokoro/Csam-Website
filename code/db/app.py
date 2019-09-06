@@ -361,6 +361,12 @@ app.layout = html.Div([
                 ),
             ],
         ),
+        html.Div([
+            html.Div([html.H1("Locations")],
+                        style={'textAlign': "center", "padding-top": "20px"}),
+                        html.Div(dcc.Graph(id="country-graph"))
+        ], className="card",
+            style={'margin': '10px'})
     ]),
 ])
 
@@ -508,6 +514,16 @@ def update_bar_chart(selected_table):
     return {
         'data': trace,
         'layout': go.Layout(title=str(title), hovermode="closest",
+                            legend=dict( y=-0.3,
+                                        font=dict(
+                                            family="sans-serif",
+                                            size=10,
+                                            color="black"
+                                        ),
+                                        # bgcolor='LightSteelBlue',
+                                        xanchor='center',
+                                        orientation='h'
+                                        ),
                             xaxis={'title': "year", 'titlefont': {'color': 'black', 'size': 14},
                                    'tickfont': {'size': 9, 'color': 'black'}},
                             yaxis={'title': "Area (‘000 ha)", 'titlefont': {'color': 'black', 'size': 14, },
@@ -551,6 +567,25 @@ def update_line_chart(selected_table):
                             yaxis={"title": str(trim_selected_df.iloc[0, 0])}, xaxis={"title": "Date"})}
 
 
+# update heat map figure based on dropdown's value and df updates
+@app.callback(
+    dash.dependencies.Output("country-graph", "figure"),
+    [dash.dependencies.Input("table-selector", "value")])
+def update_figure(selected):
+    df1 = pd.read_csv("https://raw.githubusercontent.com/plotly/datasets/master/2011_february_us_airport_traffic.csv")
+    df = df1.dropna(axis=0)
+    selected = ["CA", "TX", "GA"]
+    trace = []
+    for state in selected:
+        dff = df[df["state"] == state]
+        trace.append(
+            go.Scattermapbox(lat=dff["lat"], lon=dff["long"], mode='markers', marker={'symbol': "airport", 'size': 10},
+                             text=dff['airport'], hoverinfo='text', name=state))
+    return {"data": trace,
+            "layout": go.Layout(autosize=True, hovermode='closest', showlegend=False, height=700,
+                                mapbox={'accesstoken': mapbox_access_token, 'bearing': 0,
+                                        'center': {'lat': 35, 'lon': 110}, 'pitch': 30, 'zoom': 3,
+                                        "style": 'mapbox://styles/mapbox/light-v9'})}
 ######################################### CSS #########################################
 
 external_css = [
