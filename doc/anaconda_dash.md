@@ -46,6 +46,9 @@ or
 ### 卡片样式参考
 https://blog.csdn.net/weixin_36869329/article/details/85140424
 
+### legend样式参考
+https://community.plot.ly/t/responsive-legend-at-the-bottom-of-a-chart-is-it-possible/1554
+
 # 参考网站
 ### Dash App范例
 https://dash-gallery.plotly.host/Portal/
@@ -67,3 +70,11 @@ https://minhaskamal.github.io/DownGit/#/home
 
 ### python plotly 使用教程
 https://www.jianshu.com/p/57bad75139ca
+
+### 如何使用iframe
+https://dash.plot.ly/integrating-dash
+
+### 参考UI设计
+http://data.unescap.org/escap_stat/#data/20
+
+https://github.com/FENIX-Platform
